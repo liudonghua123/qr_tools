@@ -24,7 +24,7 @@ function configFunc(env, argv) {
     },
     output: {
       path: path.resolve(__dirname, './dist'),
-      publicPath: '.',
+      publicPath: './',
       filename: '[name].js',
     },
     module: {
@@ -74,13 +74,14 @@ function configFunc(env, argv) {
           use: [
             isDevMode ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
             'css-loader',
+            'postcss-loader',
           ],
         },
         {
           test: /\.(png|jpg|gif|svg)$/,
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]?[hash]',
+            name: '[name].[ext]?[contenthash]',
           },
         },
       ],
