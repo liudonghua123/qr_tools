@@ -46,7 +46,12 @@ function configFunc(env, argv) {
           use: [
             isDevMode ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
             'css-loader',
-            'sass-loader',
+
+            {
+              loader: 'sass-loader',
+              // eslint-disable-next-line
+              options: { implementation: require('sass') },
+            },
           ],
         },
         {

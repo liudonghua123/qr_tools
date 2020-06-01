@@ -1,41 +1,21 @@
-# vue-chrome-extension-boilerplate
-![Node.js CI](https://github.com/mubaidr/vue-chrome-extension-boilerplate/workflows/Node.js%20CI/badge.svg)[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+# qr_tools
 
-Boilerplate for Chrome extension using Vue.js and Webpack with auto-reload enabled.
+![Node.js CI](https://github.com/liudonghua123/qr_tools/workflows/Node.js%20CI/badge.svg)
 
-## Scripts
+This is a simple qr tools extension for Chrome. Created via [vue-chrome-extension-boilerplate](https://github.com/mubaidr/vue-chrome-extension-boilerplate).
 
-```json
-// install dependencies
-npm install
+This extension generates or parses qrs only in browser client, no network needs!
 
-// build extension and watch for changes
-npm run dev
+For generate, just input the text you want to create pr, then click the generate button.
 
-// build extension zip
-npm run build
+For parse, copy the image to the clipboard, then in the parse page, just paste it, then click the parse button. You can click the parsed result for copying.
 
-// lint all source files
-npm run lint
-```
+## Snapshots
 
-## Contributors ✨
+![snapshot-1](resources/snapshot-1.png)
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+![snapshot-2](resources/snapshot-2.png)
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/stealthleads"><img src="https://avatars0.githubusercontent.com/u/57643807?v=4" width="100px;" alt=""/><br /><sub><b>stealthleads</b></sub></a><br /><a href="#infra-stealthleads" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/mubaidr/vue-chrome-extension-boilerplate/commits?author=stealthleads" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/linkerGitHub"><img src="https://avatars3.githubusercontent.com/u/15519222?v=4" width="100px;" alt=""/><br /><sub><b>linkerGitHub</b></sub></a><br /><a href="https://github.com/mubaidr/vue-chrome-extension-boilerplate/commits?author=linkerGitHub" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/andrewmackie"><img src="https://avatars1.githubusercontent.com/u/1217203?v=4" width="100px;" alt=""/><br /><sub><b>Andrew Mackie</b></sub></a><br /><a href="https://github.com/mubaidr/vue-chrome-extension-boilerplate/commits?author=andrewmackie" title="Documentation">📖</a></td>
-  </tr>
-</table>
+## LICENSE
 
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+Apache License, Version 2.0
