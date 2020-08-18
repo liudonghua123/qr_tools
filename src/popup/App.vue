@@ -29,7 +29,7 @@
           />
           <button
             @click="generateQr"
-            class="flex-none operation hover:text-white hover:bg-purple-500 flex-initial"
+            class="operation hover:text-white hover:bg-purple-500 flex-initial"
           >生成二维码</button>
         </div>
         <img v-if="imageData!=null" :src="imageData" class="qr-image" />
@@ -47,7 +47,7 @@
           @click="doCopy"
           class="m-2 text-base text-gray-600 leading-normal text-center"
         >{{ result }}</p>
-        <canvas ref="canvas" width="400" height="300" style="display:none" />
+        <canvas ref="canvas" width="1024" height="1024" style="display:none" />
       </div>
     </template>
   </div>
@@ -107,11 +107,11 @@ export default {
     parseQr() {
       const { canvas } = this.$refs
       const ctx = canvas.getContext('2d')
-      const { width, height } = this.$refs.inputImage
+      // const { width, height } = this.$refs.inputImage
       const image = new Image()
-      image.src = this.inputImageData
       image.onload = () => {
         ctx.drawImage(image, 0, 0)
+        const { width, height } = image
         const imageData = ctx.getImageData(0, 0, width, height)
         console.log(imageData)
         const qrcode = new Decoder()
@@ -125,6 +125,7 @@ export default {
         this.result = `解析结果:\n${decodedData.data}`
         this.parsedText = decodedData.data
       }
+      image.src = this.inputImageData
     },
     doCopy() {
       this.$copyText(this.parsedText).then(
