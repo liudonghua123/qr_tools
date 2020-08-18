@@ -5,7 +5,7 @@
     "url": "https://mubaidr.github.io/"
   },
   "dependencies": {
-    "@nuintun/qrcode": "^2.1.0",
+    "@nuintun/qrcode": "^3.0.1",
     "autoprefixer": "^9.8.0",
     "bulma-fluent": "^0.3.20",
     "tailwindcss": "^1.4.6",
