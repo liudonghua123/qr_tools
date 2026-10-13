@@ -353,19 +353,11 @@ img {
   border-style: solid;
 }
 
-input::-webkit-input-placeholder {
-  color: #a0aec0;
-}
-
 input::-moz-placeholder {
   color: #a0aec0;
 }
 
 input:-ms-input-placeholder {
-  color: #a0aec0;
-}
-
-input::-ms-input-placeholder {
   color: #a0aec0;
 }
 
